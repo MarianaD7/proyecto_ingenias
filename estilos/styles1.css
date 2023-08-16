@@ -396,11 +396,10 @@ form textarea {
 
 /*pag servicios*/
 .tit-serv {
-    padding-top: 20px;
-    bottom: 20px;
+    padding:20px 0;
     text-align: center;
     font-weight: bold;
-    font-size: xx-large;
+    font-size: 2.5rem;
     margin-bottom: 10px; /* Agrega margen inferior al h2 */
     transition: color 0.3s; /* Transición de color para el hover */
 }
@@ -408,15 +407,22 @@ form textarea {
 .tit-serv:hover {
     color: #0ec298; /* Cambia el color al pasar el mouse por encima */
 }
-
-.intro {
+.cuerpo-serv{
+    display: flex;
+    flex-flow: column wrap;
+}
+.intro-serv {
+    width: 95%;
+    margin-left:1.2rem;
+    display: inline-block;
     font-size: 20px; /* Ajusta el tamaño de la fuente según tus preferencias */
     line-height: 1.5; /* Espaciado entre líneas para una mejor legibilidad */
     margin-bottom: 20px; /* Agrega espacio entre los párrafos */
-    text-align: left;
-    margin-left: 10px;
+    text-align: justify;
+
 }
-.tit-h3{
+.tit-h3-serv{
+    color: #0ec298;
     padding-top: 20px;
     bottom: 20px;
     text-align: center;
