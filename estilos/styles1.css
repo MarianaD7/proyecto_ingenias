@@ -518,10 +518,13 @@ a {
 
 /*footer*/
 .pie-pagina {
+  width: 100%;
   background-color: #f7f7f7;
   padding: 40px 0;
   color: #333;
-  font-size: 14px;
+  font-size: 1.3rem;
+  border-top: 1px solid #69f2dd;
+  margin-top: 40px;
 }
 
 .contenedor {
@@ -529,7 +532,7 @@ a {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  grid-gap: 5rem;
 }
 
 .columna {
@@ -537,7 +540,7 @@ a {
 }
 
 .columna h3 {
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
@@ -556,6 +559,9 @@ a {
   text-decoration: none;
   transition: color 0.3s;
 }
+.columna p{
+    margin-top: 15px;
+}
 
 .columna ul li a:hover {
   color: #1009e0;
@@ -568,7 +574,7 @@ a {
   margin-top: 20px;
   padding-top: 20px;
   border-top: 1px solid #69f2dd;
-  font-size: 12px;
+  font-size: 1.5rem;
   color: #666;
 }
 
