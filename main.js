@@ -8,7 +8,7 @@ function solicitarNumeroCelular() {
             numeroCelular = prompt("Por favor, ingrese su número de celular (solo números):");
         } while (!/^\d+$/.test(numeroCelular));
 
-        alert('Se enviará un mensaje de recordatorio a ${numeroCelular}. ¡Gracias! .Por favor recuerde llenar el formulario de consulta ');
+        alert(`Se enviará un mensaje de recordatorio a ${numeroCelular}. ¡Gracias! .Por favor recuerde llenar el formulario de consulta `);
 
        } else {
         alert("No se enviará un mensaje de recordatorio.");
