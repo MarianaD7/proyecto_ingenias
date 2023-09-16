@@ -1,56 +1,75 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" user-scalable="no" content="width=device-width, initial-scale=1.0">
-<!--para deshabilitar que se amplifique o reduzca en "viewport" debo agregar user-scalable=0 yes 1 no-->
     <link rel="stylesheet" href="../estilos/styles1.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="../media/cinta-cancer.ico"><!--Icono en la pestaña-->
     <title>Hospital Oncológico de Día</title>
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <script src="/main.js"></script>
 </head>
-<body>
-    <a href="https://api.whatsapp.com/send?phone=+542974193452&text=Bienvenidos%20al%20Hospital%20Oncologico%20de%20Dia" class="btn_whatsapp" target="_blank"> <i class="fa-brands fa-whatsapp"></i></a>
-    <a href="https://www.facebook.com/profile.php?id=100045326810624" class="btn_fb" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-    <header class="hero">
-        <div class="hero_texto">
-            <div class="titulo_header">
-                <h1>Hospital Oncológico de Día</h1>
-            </div>
-            <div  class="subtitulo_header">
-                <h2>Encontranos</h2>
-            </div>
-            <nav class="navegador">
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="./nosotros.html">Nosotros</a></li>
-                    <li><a href="./cartilla.html">Cartilla de Médicos</a></li>
-                    <li><a href="./servicios.html">Servicios</a></li>
-                    <li><a href="./contactos.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    
-    <main>
-        <section class="formulario">
-            <h2>Consulta</h2>
-            <form action="#" method="POST">
 
-                <label for="nombre">Nombre y Apellido:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Juan Perez" required><br><br>
-    
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="juanperez@gmail.com" required><br><br>
-    
-                <label for="consulta">Consulta:</label>
-                <textarea id="consulta" name="consulta" placeholder="Escriba aquí su consulta"></textarea><br><br>
-    
-                <input type="submit" value="Enviar" class="btn_enviar">
-            </form>
+<body>
+    <main>
+
+        <div class="cont">
+            <input type="checkbox" id="btn-mas">
+            <div class="redes">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-phone"></a>
+                <a href="#" class="fa fa-whatsapp"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+            <div class="btn-mas">
+                <label for="btn-mas" class="fa fa-plus"></label>
+            </div>
+        </div>
+        <header class="hero">
+            <div class="hero_texto">
+                <div class="titulo_header">
+                    <h1>Hospital Oncológico de Día</h1>
+                </div>
+                <div class="subtitulo_header">
+                    <h2>Encontranos</h2>
+                </div>
+                <nav class="navegador">
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="./nosotros.html">Nosotros</a></li>
+                        <li><a href="./cartilla.html">Cartilla de Médicos</a></li>
+                        <li><a href="./servicios.html">Servicios</a></li>
+                        <li><a href="./contactos.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div> 
+        </header>
+        <section class="formulario-conteiner">
+            <section class="formulario">
+                <h2>Consultas</h2>
+                <form action="#" method="POST">
+
+                    <label for="nombre">Nombre y Apellido:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Juan Perez" required><br><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="juanperez@gmail.com" required><br><br>
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="123-456-7890"><br><br>
+
+                    <label for="consulta">Consulta:</label>
+                    <textarea id="consulta" name="consulta" placeholder="Escriba aquí su consulta"></textarea><br><br>
+
+                    <input type="submit" value="Enviar" class="btn_enviar">
+                </form>
+            </section>
         </section>
         <section class="contacto_info">
+            <h2>Nuestros datos de contacto</h2>
             <ul>
                 <li><u>Dirección</u>: Comodoro Rivadavia, 9000</li>
                 <li><u>Celular</u>: 0297 446-9567</li>
@@ -61,25 +80,50 @@
         <section class="ubicacion">
             <h2>Ubicación</h2>
             <div id="mapa">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d494.6717752716432!2d-67.48751929642484!3d-45.868223027970544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbde454f633e7af37%3A0x2eff0f905a4ad87f!2sHospital%20Regional%20de%20Comodoro%20Rivadavia%20%22Dr.%20V%C3%ADctor%20Manuel%20Sanguinetti%22!5e0!3m2!1ses!2sar!4v1689715205168!5m2!1ses!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d347.2664296878061!2d-67.4890582635999!3d-45.86867987784722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbde4555fbe32eae5%3A0x50109c5e3db7a425!2sDirecci%C3%B3n%20%C3%81rea%20Program%C3%A1tica%20Sur!5e0!3m2!1ses!2sar!4v1694484247678!5m2!1ses!2sar"
+                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
+
         </section>
     </main>
-    <footer class="pie">
-        <!-- poner iconos de redes(facebook, gmail, whatsapp) -->
-        <div class="botones">
-            <a href="./nosotros.html" class="btn">Sobre nosotros</a>
-                <!-- Contenido de servicios -->
-            <a href="./cartilla.html" class="btn">Cartilla</a>
-                <!-- Contenido de historia -->
-            
-            <a href="./servicios.html" class="btn">Servicios</a>
-                <!-- Contenido de contacto -->
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <div class="columna">
+                <h3>Contacto</h3>
+                <p>Direccion: Avenida Hipólito Yrigoyen 950, 9000 Comodoro Rivadavia</p>
+                <p>Email: hospitaldiacomodoro@gmail.com</p>
+                <p>Teléfono: 0297 446-9567</p>
+            </div>
+            <div class="columna">
+                <h3>Preguntas frecuentes</h3>
+                <ul>
+                    <li><a href="/paginas/nosotros.html">Preguntas frecuentes</a></li>
+                    <li><a href="#">Cómo pedir turno</a></li>
+
+                </ul>
+            </div>
+            <div class="columna">
+                <h3>Enlaces de interés</h3>
+                <ul>
+                    <li><a href="https://www.argentina.gob.ar/salud/cancer"> Cáncer: prevención y detección
+                            temprana</a>
+                    </li>
+                    <li><a href="https://bancos.salud.gob.ar/recurso/los-cuidados-paliativos"> Cuidados paliativos
+                        </a>
+                    </li>
+                    <li><a
+                            href="https://www.argentina.gob.ar/salud/instituto-nacional-del-cancer/institucional/procafa">
+                            Programa Nacional de Cáncer Familiar</a></li>
+                </ul>
+            </div>
+
         </div>
-        <div>
-            <h3> Todos los derechos reservados © 2023</h3>  
-        </div>      
+        <div class="derechos">
+            <small>&copy; 2023 <b>MMA Group</b> - Todos los Derechos Reservados.</small>
+        </div>
     </footer>
-    </body>
-    
+</body>
+
 </html>
