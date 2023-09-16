@@ -10,10 +10,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Hospital Oncológico de Día</title>
     <link rel="icon" href="media\cinta-cancer.ico"><!--Icono en la pestaña-->
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 <body>
-    <a href="https://api.whatsapp.com/send?phone=+542974193452&text=Bienvenidos%20al%20Hospital%20Oncologico%20de%20Dia" class="btn_whatsapp" target="_blank"> <i class="fa-brands fa-whatsapp"></i></a>
-    <a href="https://www.facebook.com/profile.php?id=100045326810624" class="btn_fb" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-
+    <div class="cont">
+        <input type="checkbox" id="btn-mas">
+        <div class="redes">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-phone"></a>
+            <a href="#" class="fa fa-whatsapp"></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </div>
+        <div class="btn-mas">
+            <label for="btn-mas" class="fa fa-plus"></label>
+        </div>
+    </div>
     <header class="hero">
         <div class="hero_container">
             <div class="hero_texto">
@@ -58,22 +68,41 @@
             </div>            
         </section>        
     </main>
-    <footer class="pie">
-        <div class="botones">
-            <a href="paginas\nosotros.html" class="btn">Sobre nosotros</a>
-                <!-- Contenido de servicios -->
-            <a href="./paginas/cartilla.html" class="btn">Cartilla</a>
-                <!-- Contenido de historia -->
-            
-            <a href="./paginas/servicios.html" class="btn">Servicios</a>
-                <!-- Contenido de contacto -->
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <div class="columna">
+                <h3>Contacto</h3>
+                <p>Direccion: Avenida Hipólito Yrigoyen 950, 9000 Comodoro Rivadavia</p>
+                <p>Email: hospitaldiacomodoro@gmail.com</p>
+                <p>Teléfono: 0297 446-9567</p>
+            </div>
+            <div class="columna">
+                <h3>Preguntas frecuentes</h3>
+                <ul>
+                    <li><a href="/paginas/nosotros.html">Preguntas frecuentes</a></li>
+                    <li><a href="#">Cómo pedir turno</a></li>
 
-            <a href="./paginas/contactos.html" class="btn">Contacto</a>
-                <!-- Contenido de cartilla médica -->
+                </ul>
+            </div>
+            <div class="columna">
+                <h3>Enlaces de interés</h3>
+                <ul>
+                    <li><a href="https://www.argentina.gob.ar/salud/cancer"> Cáncer: prevención y detección
+                            temprana</a>
+                    </li>
+                    <li><a href="https://bancos.salud.gob.ar/recurso/los-cuidados-paliativos"> Cuidados paliativos
+                        </a>
+                    </li>
+                    <li><a
+                            href="https://www.argentina.gob.ar/salud/instituto-nacional-del-cancer/institucional/procafa">
+                            Programa Nacional de Cáncer Familiar</a></li>
+                </ul>
+            </div>
+
         </div>
-        <div>
-            <h3> Todos los derechos reservados © 2023</h3>  
-        </div>      
+        <div class="derechos">
+            <small>&copy; 2023 <b>MMA Group</b> - Todos los Derechos Reservados.</small>
+        </div>
     </footer>
 </body>
 
