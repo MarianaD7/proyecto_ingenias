@@ -347,14 +347,16 @@ a {
 /* Estilos para la sección historia */
 .historia {
   background-color: #f0f0f0;
+  width: 85%;
+  margin: 0 auto;
   padding: 30px;
   text-align: center; /* Centrar el texto en dispositivos pequeños */
 }
 .historia p {
   font-size: 20px; /* Ajusta el tamaño de la fuente según tus preferencias */
-  line-height: 1.5; /* Espaciado entre líneas para una mejor legibilidad */
-  margin-bottom: 20px; /* Agrega espacio entre los párrafos */
-  text-align: left;
+  line-height: 1.7; /* Espaciado entre líneas para una mejor legibilidad */
+  margin-bottom: 40px; /* Agrega espacio entre los párrafos */
+  text-align: justify;
 }
 .tit_hist {
   text-align: center;
