@@ -453,6 +453,11 @@ a {
   margin-bottom: 1rem;
   font-size: 2rem;
 }
+.infoDr p {
+  line-height: 1.7rem;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
 .imgDr img {
   width: 20vw;
 }
