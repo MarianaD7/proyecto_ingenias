@@ -617,7 +617,7 @@ a {
     font-size: 1.3rem;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 345px) and (max-width: 480px) {
   /*boton*/
   .btn-mas label {
     font-size: 18px;
@@ -640,20 +640,96 @@ a {
     visibility: visible;
   }
 
-  
-  
   /*header*/
   .titulo_header h1{
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   .subtitulo_header h2{
-    font-size: 1.2rem ;
+    font-size: 1.1rem ;
   }
   .navegador ul{
     gap: 10px;
   }
   .navegador ul li a{
+    font-size: 16.5px;
+  }
+  /*index*/
+  .cuerpo{
+    gap: 1rem;
+  }
+  .box_index {
+    margin: 0;
+  }
+  .box_texto h2{
+    font-size: 23px;
+  }
+  .box_texto h3{
+    font-size: 20px;
+  }
+  .box_texto p{
+    font-size: 16px;
+  }
+  .box_img{
+    padding: 1rem;
+  }
+
+  /*footer*/
+.pie-pagina{
+  margin-top: 20px;
+  padding: 20px 0;
+  }
+  .contenedor{
+    grid-gap: 1rem;
+  }
+  .columna{
+    padding: 0 7px;
+  }
+  .columna h3{
+    font-size: 17px;
+  }
+  .columna ul li, .columna p{
+    font-size: 16px;
+  }
+  .derechos{
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 344px) {
+  /*boton*/
+  .btn-mas label {
     font-size: 18px;
+  }
+  #btn-mas:checked ~ .btn-mas label {
+    font-size: 20px;
+  }
+  .btn-mas label {
+    width: 40px;
+    height: 37px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 1px 10px rgba(1, 64, 68, 0.214);
+    transition: all 500ms ease;
+  }
+  #btn-mas:checked ~ .redes a {
+    margin-bottom: 10px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /*header*/
+  .titulo_header h1{
+    font-size: 1.8rem;
+  }
+  .subtitulo_header h2{
+    font-size: 1.05rem ;
+  }
+  .navegador ul{
+    gap: 10px;
+  }
+  .navegador ul li a{
+    font-size: 16px;
   }
   /*index*/
   .cuerpo{
@@ -687,12 +763,13 @@ a {
     padding: 0 7px;
   }
   .columna h3{
-    font-size: 17px;
+    font-size: 16.5px;
   }
   .columna ul li, .columna p{
     font-size: 16px;
+    line-height: normal;
   }
   .derechos{
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
