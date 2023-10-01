@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 /*font-family: 'Lato', sans-serif;*/
 
+
 /* Estilos generales */
 * {
   margin: 0;
@@ -140,11 +141,11 @@ a {
   flex-flow: column wrap;
   gap: 2rem;
 }
-.titulo_header {
-  font-size: 2.5rem;
+.titulo_header h1 {
+  font-size: 5rem;
 }
-.subtitulo_header {
-  font-size: 2rem;
+.subtitulo_header h2 {
+  font-size: 3rem;
 }
 .navegador ul {
   list-style: none;
@@ -167,10 +168,6 @@ a {
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bolder;
-/* border-top:solid 5px  rgb(172, 86, 230);
-    border-right:solid 10px rgb(172, 86, 230);
-    border-bottom:solid 7px rgb(172, 86, 230);
-    border-left:solid 12px rgb(172, 86, 230); */
 }
 /*main*/
 .cuerpo {
@@ -209,8 +206,6 @@ a {
 .box_img img {
   width: 100%;
 }
-*/
-
 
 /* Estilos específicos */
 /*pagina de contacto*/
@@ -232,19 +227,16 @@ a {
   max-width: 400px;
   margin: 0 auto;
 }
-
 .formulario h2 {
   font-size: 24px;
   color: #333;
   margin-bottom: 10px;
 }
-
 .formulario label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
 }
-
 .formulario input[type="text"],
 .formulario input[type="email"],
 .formulario input[type="tel"],
@@ -256,7 +248,6 @@ a {
   border-radius: 5px;
   font-size: 16px;
 }
-
 .formulario input[type="submit"] {
   background-color: #007bff;
   color: #fff;
@@ -266,7 +257,6 @@ a {
   border-radius: 5px;
   cursor: pointer;
 }
-
 .formulario input[type="submit"]:hover {
   background-color: #0056b3;
 }
@@ -281,13 +271,11 @@ a {
   margin-top: 1.5rem;
   padding: 1rem;
 }
-
 .contacto_info ul {
   list-style: none;
   font-size: 1.2rem;
   padding: 0;
 }
-
 .contacto_info li {
   margin-bottom: 1rem;
 }
@@ -298,12 +286,10 @@ a {
   margin-top: 1rem;
   padding: 1rem;
 }
-
 .ubicacion h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
-
 .ubicacion iframe {
   width: 100%;
   max-width: 600px;
@@ -461,7 +447,6 @@ a {
 .imgDr img {
   width: 20vw;
 }
-
 .flechas a {
   color: white;
   font-size: 2rem;
@@ -533,43 +518,39 @@ a {
   border-top: 1px solid #69f2dd;
   margin-top: 40px;
 }
-
 .contenedor {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-gap: 5rem;
 }
-
 .columna {
   padding: 0 15px;
 }
-
 .columna h3 {
-  font-size: 20px;
+  font-size: 25px;
   margin-bottom: 10px;
 }
-
 .columna ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .columna ul li {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  font-size: 25px;
 }
-
 .columna ul li a {
   color: #333;
   text-decoration: none;
   transition: color 0.3s;
+  text-align: justify;
 }
 .columna p{
     margin-top: 15px;
+    font-size: 25px;
 }
-
 .columna ul li a:hover {
   color: #1009e0;
 }
@@ -585,234 +566,133 @@ a {
   color: #666;
 }
 
-/*medias queries*/
-/*celular*/
-@media (min-width: 320px) and(max-width:480px) {
-  .btn_whatsapp {
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
-    font-size: 20px;
-  }
-  .btn_fb {
-    bottom: 70px;
-    right: 30px;
-    width: 35px;
-    height: 35px;
-    line-height: 37px;
-    font-size: 20px;
-  }
-  .hero_texto {
-    gap: 1rem;
-  }
-  .titulo_header {
-    font-size: 20px;
-  }
-  .subtitulo_header {
-    font-size: 1rem;
-  }
-  .navegador ul li a {
-    font-size: 13px;
-  }
-  .cuerpo {
-    gap: 0.5rem;
-  }
-  /*footer*/
-  .pie {
-    height: 35vh;
-    justify-content: space-evenly;
-  }
-  .pie h3 {
-    font-size: 20px;
-  }
-  .botones {
-    margin-top: 1rem;
-  }
-  .btn {
-    font-size: 1rem;
-    padding: 10px;
-  }
-  /*index*/
-  .box_index {
-    gap: 10px;
-    margin: 10px 0;
-  }
-  .box_texto {
-    font-size: 1rem;
-  }
-  .box_img {
-    width: 38rem;
-    padding: 10px;
-  }
-  /*pag contacto*/
-  .formulario {
-    font-size: 20px;
-  }
-  .formulario h2 {
-    font-size: 23px;
-  }
-  .contacto_info ul li {
-    font-size: 20px;
-  }
-  .ubicacion h2 {
-    font-size: 23px;
-  }
-  .ubicacion iframe {
-    width: 350px;
-    height: 300px;
-  }
-  .gal-imag {
-    padding: 30px;
-    grid-template-columns: repeat(1 1fr);
-  }
-  .imag-grid:nth-child(1) {
-    grid-column-start: span 1;
-  }
-  .imag-grid:nth-child(4) {
-    grid-column-start: span 1;
-  }
-}
-/*tablets*/
-@media (min-width: 481px) and(max-width:768px) {
-  .btn_whatsapp {
-    width: 45px;
-    height: 45px;
-    line-height: 49px;
-    font-size: 25px;
-  }
-  .btn_fb {
-    width: 45px;
-    height: 45px;
-    line-height: 49px;
-    font-size: 25px;
-    bottom: 80px;
-    right: 30px;
-  }
-  .hero_texto {
-    gap: 1rem;
-  }
-  .titulo_header {
-    font-size: 1.7rem;
-  }
-  .subtitulo_header {
-    font-size: 1.5rem;
-  }
-  .navegador ul li a {
-    font-size: 1.1rem;
-  }
-  .cuerpo {
-    gap: 1rem;
-  }
-  /*footer*/
-  .pie {
-    height: 40vh;
-  }
-  .pie h3 {
-    font-size: 25px;
-  }
-  .botones {
-    margin-top: 1.2rem;
-  }
-  .btn {
-    font-size: 18px;
-    padding: 10px;
-  }
-  /*index*/
-  .box_index {
-    gap: 10px;
-    margin: 1rem 0;
-  }
-  .box_texto {
-    font-size: 1.1rem;
-  }
-  .box_img {
-    width: 40rem;
-    padding: 14px;
-  }
-  /*pag contacto*/
-  .formulario {
-    font-size: 23px;
-  }
-  .formulario h2 {
-    font-size: 25px;
-  }
-  .contacto_info ul li {
-    font-size: 23px;
-  }
-  .ubicacion h2 {
-    font-size: 25px;
-  }
-  .ubicacion iframe {
-    width: 450px;
-    height: 300px;
-  }
-  .gal-imag {
-    padding: 30px;
-    grid-template-columns: repeat(1 1fr);
-  }
-  .imag-grid:nth-child(1) {
-    grid-column-start: span 1;
-  }
-  .imag-grid:nth-child(4) {
-    grid-column-start: span 1;
-  }
-}
-/*notebooks/laptops*/
-@media (min-width: 769px) and(max-width:1024px) {
-  .hero_texto {
-    gap: 1rem;
-  }
-  .titulo_header {
-    font-size: 2rem;
-  }
-  .subtitulo_header {
-    font-size: 1.7rem;
-  }
-  .navegador ul li a {
-    font-size: 1.25rem;
-  }
-  .cuerpo {
-    gap: 1.5rem;
-  }
-  /*footer*/
-  .pie {
-    height: 40vh;
-  }
-  .pie h3 {
-    font-size: 29px;
-  }
-  .botones {
-    margin-top: 1.5rem;
-  }
-  .btn {
-    font-size: 20px;
-    padding: 12px;
-  }
-  /*index*/
-  .box_index {
-    gap: 10px;
-    margin: 1rem 0;
-  }
-  .box_texto {
-    font-size: 1.2rem;
-  }
-  /*pag contacto*/
 
-  .formulario {
-    font-size: 25px;
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /*header*/
+  .titulo_header h1{
+    font-size: 4rem;
   }
-  .formulario h2 {
-    font-size: 28px;
+  .subtitulo_header h2{
+    font-size: 2rem ;
   }
-  .contacto_info ul li {
-    font-size: 25px;
-    letter-spacing: 1px;
+  /*footer*/
+  .contenedor{
+    grid-gap: 3rem;
   }
-  .ubicacion h2 {
-    font-size: 28px;
+  .columna h3{
+    font-size: 20px;
   }
-  .ubicacion iframe {
-    width: 700px;
-    height: 500px;
+  .columna ul li, .columna p{
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  /*header*/
+  .titulo_header h1{
+    font-size: 2.9rem;
+  }
+  .subtitulo_header h2{
+    font-size: 1.7rem ;
+  }
+  .navegador ul{
+    gap: 20px;
+  }
+  .navegador ul li a{
+    font-size: 22px;
+  }
+  /*footer*/
+  .contenedor{
+    grid-gap: 3rem;
+  }
+  .columna{
+    padding: 0 10px;
+  }
+  .columna h3{
+    font-size: 18px;
+  }
+  .columna ul li, .columna p{
+    font-size: 17px;
+  }
+  .derechos{
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  /*boton*/
+  .btn-mas label {
+    font-size: 18px;
+  }
+  #btn-mas:checked ~ .btn-mas label {
+    font-size: 20px;
+  }
+  .btn-mas label {
+    width: 40px;
+    height: 37px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 1px 10px rgba(1, 64, 68, 0.214);
+    transition: all 500ms ease;
+  }
+  #btn-mas:checked ~ .redes a {
+    margin-bottom: 10px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  
+  
+  /*header*/
+  .titulo_header h1{
+    font-size: 2.2rem;
+  }
+  .subtitulo_header h2{
+    font-size: 1.2rem ;
+  }
+  .navegador ul{
+    gap: 10px;
+  }
+  .navegador ul li a{
+    font-size: 18px;
+  }
+  /*index*/
+  .cuerpo{
+    gap: 1rem;
+  }
+  .box_index {
+    margin: 0;
+  }
+  .box_texto h2{
+    font-size: 23px;
+  }
+  .box_texto h3{
+    font-size: 20px;
+  }
+  .box_texto p{
+    font-size: 16px;
+  }
+  .box_img{
+    padding: 1rem;
+  }
+
+  /*footer*/
+  .pie-pagina{
+    margin-top: 20px;
+    padding: 20px 0;
+  }
+  .contenedor{
+    grid-gap: 1rem;
+  }
+  .columna{
+    padding: 0 7px;
+  }
+  .columna h3{
+    font-size: 17px;
+  }
+  .columna ul li, .columna p{
+    font-size: 16px;
+  }
+  .derechos{
+    font-size: 1.1rem;
   }
 }
