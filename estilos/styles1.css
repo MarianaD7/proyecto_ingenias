@@ -170,6 +170,7 @@ a {
   font-weight: bolder;
 }
 /*main*/
+/*index*/
 .cuerpo {
   display: flex;
   flex-flow: column wrap;
@@ -306,7 +307,7 @@ a {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 250px;
   grid-gap: 20px;
-  padding: 100px 0;
+  padding: 50px 0;
 }
 .tit-gal {
   text-align: center;
@@ -575,6 +576,59 @@ a {
   .subtitulo_header h2{
     font-size: 2rem ;
   }
+
+  /*index*/
+  .cuerpo{
+    gap: 1.2rem;
+  }
+  .box_index {
+    margin: 0;
+  }
+  .box_texto h2{
+    font-size: 1.85rem;
+  }
+  .box_texto h3{
+    font-size: 25px;
+  }
+  .box_texto p{
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  .box_img{
+    padding: 1rem;
+  }
+
+  /*nosotros*/
+  .gal-imag {
+    padding: 40px 5px 20px 5px;
+  }
+  .tit-gal {
+    font-size: 1.85rem;
+    align-self: center;
+  }
+  .historia{
+    margin: 0 auto;
+    margin-bottom: 25px;
+    padding: 20px;
+  }
+  .historia .tit_hist, .contenedor-acordeon .tit_hist{
+    font-size: 1.7rem;
+  }
+  .historia p{
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  .contenedor-acordeon{
+    margin: 0 auto;
+  }
+  .acordeon label {
+    font-size: 19px;
+  }
+  .contenido-acordeon{
+    font-size: 18px;
+  }
+
   /*footer*/
   .contenedor{
     grid-gap: 3rem;
@@ -600,6 +654,59 @@ a {
   .navegador ul li a{
     font-size: 22px;
   }
+
+  /*index*/
+  .cuerpo{
+    gap: 1rem;
+  }
+  .box_index {
+    margin: 0;
+  }
+  .box_texto h2{
+    font-size: 1.65rem;
+  }
+  .box_texto h3{
+    font-size: 22px;
+  }
+  .box_texto p{
+    font-size: 17px;
+    line-height: 1.5;
+  }
+  .box_img{
+    padding: 1rem;
+  }
+
+  /*nosotros*/
+  .gal-imag {
+    grid-template-rows: 200px;
+    padding: 25px 0;
+  }
+   .tit-gal {
+     font-size: 1.5rem;
+     align-self: center;
+  }
+  .historia{
+    margin: 0 20px;
+    padding: 20px;
+  }
+  .historia .tit_hist, .contenedor-acordeon .tit_hist{
+    font-size: 1.5rem;
+  }
+  .historia p{
+    margin-bottom: 20px;
+    font-size: 17px;
+    line-height: 1.5;
+  }
+  .contenedor-acordeon{
+    margin-top: 40px;
+  }
+  .acordeon label {
+    font-size: 18px;
+  }
+  .contenido-acordeon{
+    font-size: 17px;
+  }
+
   /*footer*/
   .contenedor{
     grid-gap: 3rem;
@@ -668,9 +775,42 @@ a {
   }
   .box_texto p{
     font-size: 16px;
+    line-height: 1.5;
   }
   .box_img{
     padding: 1rem;
+  }
+
+  /*nosotros*/
+  .gal-imag {
+    grid-template-rows: 140px;
+    grid-gap: 10px;
+    padding: 20px 0;
+  }
+   .tit-gal {
+     font-size: 23px;
+     align-self: center;
+  }
+  .historia{
+    margin: 0 20px;
+    padding: 20px;
+  }
+  .historia .tit_hist, .contenedor-acordeon .tit_hist{
+    font-size: 1.5rem;
+  }
+  .historia p{
+    margin-bottom: 20px;
+    font-size: 17px;
+    line-height: 1.5;
+  }
+  .contenedor-acordeon{
+    margin-top: 40px;
+  }
+  .acordeon label {
+    font-size: 18px;
+  }
+  .contenido-acordeon{
+    font-size: 17px;
   }
 
   /*footer*/
@@ -749,6 +889,35 @@ a {
   }
   .box_img{
     padding: 1rem;
+  }
+
+  /*nosotros*/
+  .gal-imag {
+    grid-template-rows: 100px;
+    grid-gap: 7px;
+    padding: 20px 0;
+  }
+   .tit-gal {
+     font-size: 20px;
+     align-self: center;
+  }
+  .historia{
+    margin: 0 10px;
+    padding: 20px;
+  }
+  .historia .tit_hist, .contenedor-acordeon .tit_hist{
+    font-size: 1.2rem;
+  }
+  .historia p{
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  .contenedor-acordeon{
+    margin-top: 40px;
+  }
+  .acordeon label {
+    font-size: 17.5px;
   }
 
   /*footer*/
