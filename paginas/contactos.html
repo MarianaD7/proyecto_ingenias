@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../estilos/styles1.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="../media/cinta-cancer.ico"><!--Icono en la pestaña-->
     <title>Hospital Oncológico de Día</title>
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
-    
+
 </head>
 
 <body>
@@ -42,29 +45,55 @@
                         <li><a href="./contactos.html">Contacto</a></li>
                     </ul>
                 </nav>
-            </div> 
+            </div>
         </header>
-        <section class="formulario-conteiner">
-            <section class="formulario">
-                <h2>Consultas</h2>
-                <form action="#" method="POST">
+        <div class="formulario">
+            <h2>Consultas</h2>
+            <form action="#" method="POST" onsubmit="return enviarFormulario()">
+                <fieldset>
 
-                    <label for="nombre">Nombre y Apellido:</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Juan Perez" required><br><br>
+                    <legend>Información personal</legend>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="juanperez@gmail.com" required><br><br>
+                    <p><label>Nombre: </label></p>
+                    <input type="text" id="nombre" name="nombre" placeholder="Juan" required>
+                    <p><label>Apellido: </label></p>
+                    <input type="text" id="nombre" name="apellido" placeholder="Perez" required>
+                    <p><label>Numero de contacto:</label></p>
+                    <input type="tel" id="telefono" name="telefono" placeholder="123-456-7890" required>
+                    <p><label>Email:</label></p>
+                    <input type="email" id="email" name="email" placeholder="juanperez@gmail.com" required>
+                </fieldset>
 
-                    <label for="telefono">Teléfono:</label>
-                    <input type="tel" id="telefono" name="telefono" placeholder="123-456-7890"><br><br>
+                <fieldset>
 
-                    <label for="consulta">Consulta:</label>
-                    <textarea id="consulta" name="consulta" placeholder="Escriba aquí su consulta"></textarea><br><br>
+                    <legend>¿En que podemos ayudarte?</legend>
 
-                    <input type="submit" value="Enviar" class="btn_enviar">
-                </form>
-            </section>
-        </section>
+                    <p>
+
+                        <label><input type="checkbox" name="turnos"> Turnos</label><br>
+
+                        <label><input type="checkbox" name="tratamiento"> Tratamiento </label><br>
+
+                        <label><input type="checkbox" name="consulta"> Consultas</label><br>
+
+                    </p>
+
+                </fieldset>
+
+                <div class="botones-container">
+                    <input type="submit" value="Enviar">
+                    <button onclick="mostrarInformacionAlmacenada()">Mostrar Información Almacenada</button>
+                    <button onclick="agregarNuevoElemento()">Agregar Nuevo Elemento</button>
+
+                </div>
+
+
+                <!-- Contenedor para mostrar la información almacenada -->
+                <div id="infoContainer"></div>
+
+
+            </form>
+        </div>
         <section class="contacto_info">
             <h2>Nuestros datos de contacto</h2>
             <ul>
@@ -121,7 +150,7 @@
             <small>&copy; 2023 <b>MMA Group</b> - Todos los Derechos Reservados.</small>
         </div>
     </footer>
-    <script src="/main.js"></script>
+    <script src="../main.js"></script>
 </body>
 
 </html>
