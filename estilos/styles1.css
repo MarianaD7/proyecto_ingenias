@@ -224,12 +224,12 @@ a {
 .formulario h2 {
   margin-bottom: 10px;
   text-align: center;
-  font-weight: bold;
+  font-weight:bolder;
   font-size: xx-large;
   transition: color 0.3s; /* Transición de color para el hover */
 }
 /* Estilos para el hover */
-.formulario h2 {
+.formulario h2:hover {
   color: #0ec298; /* Cambia el color al pasar el mouse por encima */
 }
 form {
