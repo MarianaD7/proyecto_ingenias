@@ -49,15 +49,15 @@
         </header>
         <div class="formulario">
             <h2>Consultas</h2>
-            <form action="#" method="POST" onsubmit="return enviarFormulario()">
+            <form id="miFormulario" action="#" method="POST">
                 <fieldset>
-
+    
                     <legend>Información personal</legend>
-
+    
                     <p><label>Nombre: </label></p>
-                    <input type="text" id="nombre" name="nombre" placeholder="Juan" required>
+                    <input type="text" id="nombre" name="nombre" placeholder="Juan" required minlength="2">
                     <p><label>Apellido: </label></p>
-                    <input type="text" id="nombre" name="apellido" placeholder="Perez" required>
+                    <input type="text" id="apellido" name="apellido" placeholder="Perez" required>
                     <p><label>Numero de contacto:</label></p>
                     <input type="tel" id="telefono" name="telefono" placeholder="123-456-7890" required>
                     <p><label>Email:</label></p>

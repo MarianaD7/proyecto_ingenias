@@ -16,91 +16,111 @@ function solicitarNumeroCelular() {
 }
 solicitarNumeroCelular();
 
-// Obtener referencias a los campos del formulario
-const nombreInput = document.getElementById('nombre');
-const emailInput = document.getElementById('email');
-const telefonoInput = document.getElementById('telefono');
-const consultaInput = document.getElementById('consulta');
+function validarFormulario() { // Obtener valores de los campos
+    var nombre = document.getElementById("nombre").value.trim();
+    var apellido = document.getElementById("apellido").value.trim();
+    var telefono = document.getElementById("telefono").value.trim();
+    var email = document.getElementById("email").value.trim();
 
-// Escuchar el evento de envío del formulario
-const formulario = document.querySelector('form');
-formulario.addEventListener('submit', function (event) {
-    event.preventDefault();
-    // Prevenir el envío por defecto
+    // Validar nombre (al menos 2 caracteres)
+    if (nombre.length < 2) {
+        alert(`El nombre debe tener al menos 2 caracteres.`);
+        return false;
+    }
+    // Validar el apellido (Solo letras)
+    if (/\d/.test(apellido)) {
+        alert("El apellido no debe contener números.");
+        return false;
+    }
 
-    // Obtener los valores ingresados por el usuario
-    const nombre = nombreInput.value;
-    const email = emailInput.value;
-    const telefono = telefonoInput.value;
-    const consulta = consultaInput.value;
+    // Validar teléfono (solo números)
+    if (!/^\d+$/.test(telefono)) {
+        alert("El número de contacto solo debe contener números.");
+        return false;
+    }
 
-    // Crear un objeto con la información
-    const paciente = {
-        nombre,
-        email,
-        telefono,
-        consulta
+    // Validar correo electrónico (contiene "@" y al menos un carácter antes y después de "@")
+    if (!/^.+@.+\..+$/.test(email)) {
+        alert("Por favor, ingrese un correo electrónico válido.");
+        return false;
+    }
+
+    return true;
+}
+
+function enviarFormulario() { // Obtener los valores de los campos
+    var nombre = document.querySelector('#nombre').value;
+    var apellido = document.querySelector('#apellido').value;
+    var telefono = document.querySelector('#telefono').value;
+    var email = document.querySelector('#email').value;
+
+    // Obtener las elecciones de los checkboxes
+    var turnos = document.querySelector('input[name="turnos"]').checked;
+    var tratamiento = document.querySelector('input[name="tratamiento"]').checked;
+    var consulta = document.querySelector('input[name="consulta"]').checked;
+
+    // Crear un objeto con los datos del formulario
+    var formData = {
+        nombre: nombre,
+        apellido: apellido,
+        telefono: telefono,
+        email: email,
+        eleccionTurnos: turnos ? "Turnos" : "",
+        eleccionTratamiento: tratamiento ? "Tratamiento" : "",
+        eleccionConsulta: consulta ? "Consultas" : ""
     };
 
-    // Convertir el objeto a JSON y almacenarlo en LocalStorage
-    localStorage.setItem('paciente', JSON.stringify(paciente));
+    // Obtener la base de datos existente o crear una nueva
+    var baseDeDatos = JSON.parse(localStorage.getItem('baseDeDatos')) || [];
 
-    // Limpiar los campos del formulario
-    nombreInput.value = '';
-    emailInput.value = '';
-    telefonoInput.value = '';
-    consultaInput.value = '';
+    // Agregar los datos del formulario a la base de datos
+    baseDeDatos.push(formData);
 
-    // Mostrar la información al usuario (puedes hacerlo en una sección designada)
-    mostrarInformacionAlUsuario(paciente);
-});
+    // Almacenar la base de datos actualizada en el localStorage
+    localStorage.setItem('baseDeDatos', JSON.stringify(baseDeDatos));
 
-function mostrarInformacionAlUsuario(paciente) { // Obtener el elemento donde deseas mostrar la información
-    const infoContainer = document.getElementById('info-container');
+    // Mostrar un mensaje de éxito (esto se puede personalizar)
+    alert("Formulario enviado con éxito");
 
-    // Crear elementos para mostrar la información
-    const nombreElement = document.createElement('p');
-    nombreElement.textContent = `Nombre: ${
-        paciente.nombre
-    }`;
-
-    const emailElement = document.createElement('p');
-    emailElement.textContent = `Email: ${
-        paciente.email
-    }`;
-
-    const telefonoElement = document.createElement('p');
-    telefonoElement.textContent = `Teléfono: ${
-        paciente.telefono
-    }`;
-
-    const consultaElement = document.createElement('p');
-    consultaElement.textContent = `Consulta: ${
-        paciente.consulta
-    }`;
-
-    // Agregar los elementos al contenedor
-    infoContainer.innerHTML = ''; // Limpiar contenido previo
-    infoContainer.appendChild(nombreElement);
-    infoContainer.appendChild(emailElement);
-    infoContainer.appendChild(telefonoElement);
-    infoContainer.appendChild(consultaElement);
+    // Evitar que el formulario realice un envío real
+    return false;
 }
-// Leer la estructura de datos JSON desde LocalStorage
-const jsonBaseDeDatos = localStorage.getItem('baseDeDatos');
-const baseDeDatos = JSON.parse(jsonBaseDeDatos) || {
-    pacientes: []
-};
+// Función para mostrar la información almacenada
+function mostrarInformacionAlmacenada() {
+    // Obtener la base de datos desde el localStorage
+    var baseDeDatos = JSON.parse(localStorage.getItem('baseDeDatos')) || [];
 
-// Agregar un nuevo paciente a la estructura de datos
-const nuevoPaciente = {
-    nombre: 'Nuevo Paciente',
-    email: 'nuevo@gmail.com',
-    telefono: '123-456-7890',
-    consulta: 'Nueva Consulta'
-};
+    // Mostrar la información almacenada (puedes personalizar cómo se muestra)
+    var infoContainer = document.getElementById('infoContainer');
+    infoContainer.innerHTML = ''; // Limpiar el contenedor
 
-baseDeDatos.pacientes.push(nuevoPaciente);
+    baseDeDatos.forEach(function (formData, index) {
+        var infoDiv = document.createElement('div');
+        infoDiv.classList.add('infoEntry');
+        infoDiv.innerHTML = `<h3>Entrada ${index + 1}:</h3>
+        <p>Nombre: ${formData.nombre} ${formData.apellido}</p>
+        <p>Teléfono: ${formData.telefono}</p>
+        <p>Email: ${formData.email}</p>
+        <p>Elecciones: ${formData.eleccionTurnos}, ${formData.eleccionTratamiento}, ${formData.eleccionConsulta}</p>`;
+        infoContainer.appendChild(infoDiv);
+    });
+}
+// Función para agregar un nuevo elemento a la base de datos
+function agregarNuevoElemento() {
+    var nombreNuevo = prompt("Ingrese un nuevo nombre:");
+    var apellidoNuevo = prompt("Ingrese un nuevo apellido:");
+    var telefonoNuevo = prompt("Ingrese un nuevo número de teléfono:");
+    var emailNuevo = prompt("Ingrese un nuevo correo electrónico:");
 
-// Convertir y guardar la estructura de datos actualizada en LocalStorage
-localStorage.setItem('baseDeDatos', JSON.stringify(baseDeDatos));
+    var nuevoFormData = {
+        nombre: nombreNuevo,
+        apellido: apellidoNuevo,
+        telefono: telefonoNuevo,
+        email: emailNuevo
+    };
+
+    var baseDeDatos = JSON.parse(localStorage.getItem('baseDeDatos')) || [];
+    baseDeDatos.push(nuevoFormData);
+    localStorage.setItem('baseDeDatos', JSON.stringify(baseDeDatos));
+    mostrarInformacionAlmacenada();
+}
