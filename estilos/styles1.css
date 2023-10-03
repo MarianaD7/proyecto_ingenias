@@ -4,7 +4,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
 /*font-family: 'Lato', sans-serif;*/
 
-
 /* Estilos generales */
 * {
   margin: 0;
@@ -210,55 +209,105 @@ a {
 
 /* Estilos específicos */
 /*pagina de contacto*/
-
-.formulario-conteiner {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f0f0f0;
-}
 .formulario {
-  background-color: #f5f5f5;
+  background-image: url("/media/fondo-medicina-escritorio.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  /* Fondo semi-transparente */
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  max-width: 400px;
-  margin: 0 auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 .formulario h2 {
-  font-size: 24px;
-  color: #333;
   margin-bottom: 10px;
-}
-.formulario label {
-  display: block;
+  text-align: center;
   font-weight: bold;
+  font-size: xx-large;
+  transition: color 0.3s; /* Transición de color para el hover */
+}
+/* Estilos para el hover */
+.formulario h2 {
+  color: #0ec298; /* Cambia el color al pasar el mouse por encima */
+}
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Fondo semi-transparente */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-weight: bold;
+  color: #333;
+}
+
+label {
+  display: block;
   margin-bottom: 5px;
 }
-.formulario input[type="text"],
-.formulario input[type="email"],
-.formulario input[type="tel"],
-.formulario textarea {
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
   width: 100%;
-  padding: 10px;
+  padding: 4px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
 }
-.formulario input[type="submit"] {
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.botones-container {
+  display: flex;
+  flex-direction: column; /* Alinear los elementos en columna */
+  align-items: center; /* Centrar horizontalmente */
+  gap: 10px; /* Espacio entre los botones */
+}
+
+input[type="submit"] {
   background-color: #007bff;
   color: #fff;
-  border: none;
   padding: 10px 20px;
-  font-size: 18px;
+  border: none;
   border-radius: 5px;
+  font-size: 16px;
   cursor: pointer;
+  margin-right: 10px;
 }
-.formulario input[type="submit"]:hover {
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+button:hover {
   background-color: #0056b3;
 }
 
@@ -304,7 +353,7 @@ a {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 250px;
   grid-gap: 20px;
   padding: 50px 0;
@@ -548,9 +597,9 @@ a {
   transition: color 0.3s;
   text-align: justify;
 }
-.columna p{
-    margin-top: 15px;
-    font-size: 25px;
+.columna p {
+  margin-top: 15px;
+  font-size: 25px;
 }
 .columna ul li a:hover {
   color: #1009e0;
@@ -567,34 +616,33 @@ a {
   color: #666;
 }
 
-
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   /*header*/
-  .titulo_header h1{
+  .titulo_header h1 {
     font-size: 4rem;
   }
-  .subtitulo_header h2{
-    font-size: 2rem ;
+  .subtitulo_header h2 {
+    font-size: 2rem;
   }
 
   /*index*/
-  .cuerpo{
+  .cuerpo {
     gap: 1.2rem;
   }
   .box_index {
     margin: 0;
   }
-  .box_texto h2{
+  .box_texto h2 {
     font-size: 1.85rem;
   }
-  .box_texto h3{
+  .box_texto h3 {
     font-size: 25px;
   }
-  .box_texto p{
+  .box_texto p {
     font-size: 20px;
     line-height: 1.5;
   }
-  .box_img{
+  .box_img {
     padding: 1rem;
   }
 
@@ -606,73 +654,75 @@ a {
     font-size: 1.85rem;
     align-self: center;
   }
-  .historia{
+  .historia {
     margin: 0 auto;
     margin-bottom: 25px;
     padding: 20px;
   }
-  .historia .tit_hist, .contenedor-acordeon .tit_hist{
+  .historia .tit_hist,
+  .contenedor-acordeon .tit_hist {
     font-size: 1.7rem;
   }
-  .historia p{
+  .historia p {
     margin-bottom: 20px;
     font-size: 18px;
     line-height: 1.5;
   }
-  .contenedor-acordeon{
+  .contenedor-acordeon {
     margin: 0 auto;
   }
   .acordeon label {
     font-size: 19px;
   }
-  .contenido-acordeon{
+  .contenido-acordeon {
     font-size: 18px;
   }
 
   /*footer*/
-  .contenedor{
+  .contenedor {
     grid-gap: 3rem;
   }
-  .columna h3{
+  .columna h3 {
     font-size: 20px;
   }
-  .columna ul li, .columna p{
+  .columna ul li,
+  .columna p {
     font-size: 18px;
   }
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
   /*header*/
-  .titulo_header h1{
+  .titulo_header h1 {
     font-size: 2.9rem;
   }
-  .subtitulo_header h2{
-    font-size: 1.7rem ;
+  .subtitulo_header h2 {
+    font-size: 1.7rem;
   }
-  .navegador ul{
+  .navegador ul {
     gap: 20px;
   }
-  .navegador ul li a{
+  .navegador ul li a {
     font-size: 22px;
   }
 
   /*index*/
-  .cuerpo{
+  .cuerpo {
     gap: 1rem;
   }
   .box_index {
     margin: 0;
   }
-  .box_texto h2{
+  .box_texto h2 {
     font-size: 1.65rem;
   }
-  .box_texto h3{
+  .box_texto h3 {
     font-size: 22px;
   }
-  .box_texto p{
+  .box_texto p {
     font-size: 17px;
     line-height: 1.5;
   }
-  .box_img{
+  .box_img {
     padding: 1rem;
   }
 
@@ -681,46 +731,48 @@ a {
     grid-template-rows: 200px;
     padding: 25px 0;
   }
-   .tit-gal {
-     font-size: 1.5rem;
-     align-self: center;
+  .tit-gal {
+    font-size: 1.5rem;
+    align-self: center;
   }
-  .historia{
+  .historia {
     margin: 0 20px;
     padding: 20px;
   }
-  .historia .tit_hist, .contenedor-acordeon .tit_hist{
+  .historia .tit_hist,
+  .contenedor-acordeon .tit_hist {
     font-size: 1.5rem;
   }
-  .historia p{
+  .historia p {
     margin-bottom: 20px;
     font-size: 17px;
     line-height: 1.5;
   }
-  .contenedor-acordeon{
+  .contenedor-acordeon {
     margin-top: 40px;
   }
   .acordeon label {
     font-size: 18px;
   }
-  .contenido-acordeon{
+  .contenido-acordeon {
     font-size: 17px;
   }
 
   /*footer*/
-  .contenedor{
+  .contenedor {
     grid-gap: 3rem;
   }
-  .columna{
+  .columna {
     padding: 0 10px;
   }
-  .columna h3{
+  .columna h3 {
     font-size: 18px;
   }
-  .columna ul li, .columna p{
+  .columna ul li,
+  .columna p {
     font-size: 17px;
   }
-  .derechos{
+  .derechos {
     font-size: 1.3rem;
   }
 }
@@ -748,36 +800,36 @@ a {
   }
 
   /*header*/
-  .titulo_header h1{
+  .titulo_header h1 {
     font-size: 2rem;
   }
-  .subtitulo_header h2{
-    font-size: 1.1rem ;
+  .subtitulo_header h2 {
+    font-size: 1.1rem;
   }
-  .navegador ul{
+  .navegador ul {
     gap: 10px;
   }
-  .navegador ul li a{
+  .navegador ul li a {
     font-size: 16.5px;
   }
   /*index*/
-  .cuerpo{
+  .cuerpo {
     gap: 1rem;
   }
   .box_index {
     margin: 0;
   }
-  .box_texto h2{
+  .box_texto h2 {
     font-size: 23px;
   }
-  .box_texto h3{
+  .box_texto h3 {
     font-size: 20px;
   }
-  .box_texto p{
+  .box_texto p {
     font-size: 16px;
     line-height: 1.5;
   }
-  .box_img{
+  .box_img {
     padding: 1rem;
   }
 
@@ -787,50 +839,52 @@ a {
     grid-gap: 10px;
     padding: 20px 5px;
   }
-   .tit-gal {
-     font-size: 23px;
-     align-self: center;
+  .tit-gal {
+    font-size: 23px;
+    align-self: center;
   }
-  .historia{
+  .historia {
     margin: 0 15px;
     padding: 15px;
   }
-  .historia .tit_hist, .contenedor-acordeon .tit_hist{
+  .historia .tit_hist,
+  .contenedor-acordeon .tit_hist {
     font-size: 1.5rem;
   }
-  .historia p{
+  .historia p {
     margin-bottom: 20px;
     font-size: 17px;
     line-height: 1.5;
   }
-  .contenedor-acordeon{
+  .contenedor-acordeon {
     margin-top: 40px;
   }
   .acordeon label {
     font-size: 18px;
   }
-  .contenido-acordeon{
+  .contenido-acordeon {
     font-size: 17px;
   }
 
   /*footer*/
-.pie-pagina{
-  margin-top: 20px;
-  padding: 20px 0;
+  .pie-pagina {
+    margin-top: 20px;
+    padding: 20px 0;
   }
-  .contenedor{
+  .contenedor {
     grid-gap: 1rem;
   }
-  .columna{
+  .columna {
     padding: 0 7px;
   }
-  .columna h3{
+  .columna h3 {
     font-size: 17px;
   }
-  .columna ul li, .columna p{
+  .columna ul li,
+  .columna p {
     font-size: 16px;
   }
-  .derechos{
+  .derechos {
     font-size: 1.1rem;
   }
 }
@@ -859,35 +913,35 @@ a {
   }
 
   /*header*/
-  .titulo_header h1{
+  .titulo_header h1 {
     font-size: 1.8rem;
   }
-  .subtitulo_header h2{
-    font-size: 1.05rem ;
+  .subtitulo_header h2 {
+    font-size: 1.05rem;
   }
-  .navegador ul{
+  .navegador ul {
     gap: 10px;
   }
-  .navegador ul li a{
+  .navegador ul li a {
     font-size: 16px;
   }
   /*index*/
-  .cuerpo{
+  .cuerpo {
     gap: 1rem;
   }
   .box_index {
     margin: 0;
   }
-  .box_texto h2{
+  .box_texto h2 {
     font-size: 23px;
   }
-  .box_texto h3{
+  .box_texto h3 {
     font-size: 20px;
   }
-  .box_texto p{
+  .box_texto p {
     font-size: 16px;
   }
-  .box_img{
+  .box_img {
     padding: 1rem;
   }
 
@@ -897,23 +951,24 @@ a {
     grid-gap: 7px;
     padding: 20px 5px;
   }
-   .tit-gal {
-     font-size: 20px;
-     align-self: center;
+  .tit-gal {
+    font-size: 20px;
+    align-self: center;
   }
-  .historia{
+  .historia {
     margin: 0 10px;
     padding: 15px;
   }
-  .historia .tit_hist, .contenedor-acordeon .tit_hist{
+  .historia .tit_hist,
+  .contenedor-acordeon .tit_hist {
     font-size: 1.2rem;
   }
-  .historia p{
+  .historia p {
     margin-bottom: 20px;
     font-size: 16px;
     line-height: 1.4;
   }
-  .contenedor-acordeon{
+  .contenedor-acordeon {
     margin-top: 40px;
   }
   .acordeon label {
@@ -921,24 +976,25 @@ a {
   }
 
   /*footer*/
-  .pie-pagina{
+  .pie-pagina {
     margin-top: 20px;
     padding: 20px 0;
   }
-  .contenedor{
+  .contenedor {
     grid-gap: 1rem;
   }
-  .columna{
+  .columna {
     padding: 0 7px;
   }
-  .columna h3{
+  .columna h3 {
     font-size: 16.5px;
   }
-  .columna ul li, .columna p{
+  .columna ul li,
+  .columna p {
     font-size: 16px;
     line-height: normal;
   }
-  .derechos{
+  .derechos {
     font-size: 1rem;
   }
 }
