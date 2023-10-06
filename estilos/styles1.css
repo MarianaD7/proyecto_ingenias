@@ -68,46 +68,6 @@ body {
 a {
   text-decoration: none;
 }
-/*.btn_whatsapp {
-  position: fixed;
-  width: 55px;
-  height: 55px;
-  line-height: 55px;
-  bottom: 30px;
-  right: 30px;
-  background: #0df053;
-  color: white;
-  border-radius: 50px;
-  text-align: center;
-  font-size: 30px;
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
-  z-index: 1;
-}
-.btn_whatsapp:hover {
-  text-decoration: none;
-  color: #0df053;
-  background: white;
-}
-.btn_fb {
-  position: fixed;
-  width: 55px;
-  height: 55px;
-  line-height: 57px;
-  bottom: 30px;
-  right: 100px;
-  background: rgb(30, 48, 80);
-  color: white;
-  border-radius: 50px;
-  text-align: center;
-  font-size: 30px;
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
-  z-index: 1;
-}
-.btn_fb:hover {
-  text-decoration: none;
-  color: rgb(30, 48, 80);
-  background: white;
-} */
 /*Header*/
 .hero {
   width: 100%;
@@ -404,7 +364,9 @@ a {
   margin: 0 10px;
 }
 .intro-serv {
-  width: 95%;
+  align-self: center;
+  justify-self: center;
+  width: 85%;
   margin-left: 1.2rem;
   display: inline-block;
   font-size: 20px; /* Ajusta el tamaño de la fuente según tus preferencias */
@@ -456,26 +418,22 @@ form {
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-
 fieldset {
   border: 1px solid #ddd;
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 20px;
 }
-
 legend {
   font-weight: bold;
   font-size: 18px;
   color: #333;
 }
-
 label {
   display: block;
   margin-bottom: 5px;
   font-size: 18px;
 }
-
 input[type="text"],
 input[type="tel"],
 input[type="email"] {
@@ -486,18 +444,15 @@ input[type="email"] {
   border-radius: 5px;
   font-size: 18px;
 }
-
 input[type="checkbox"] {
   margin-right: 5px;
 }
-
 .botones-container {
   display: flex;
   flex-direction: column; /* Alinear los elementos en columna */
   align-items: center; /* Centrar horizontalmente */
   gap: 10px; /* Espacio entre los botones */
 }
-
 input[type="submit"] {
   background-color: #007bff;
   color: #fff;
@@ -508,11 +463,9 @@ input[type="submit"] {
   cursor: pointer;
   margin-right: 10px;
 }
-
 input[type="submit"]:hover {
   background-color: #0056b3;
 }
-
 button {
   background-color: #007bff;
   color: #fff;
@@ -523,11 +476,9 @@ button {
   cursor: pointer;
   margin-right: 10px;
 }
-
 button:hover {
   background-color: #0056b3;
 }
-
 .contacto_info {
   display: flex;
   flex-direction: column;
