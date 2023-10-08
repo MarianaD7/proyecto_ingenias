@@ -390,7 +390,7 @@ a {
   background-image: url("/media/fondo-medicina-escritorio.jpg");
   background-size: cover;
   background-attachment: fixed;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.9);
   /* Fondo semi-transparente */
@@ -425,14 +425,15 @@ fieldset {
   margin-bottom: 20px;
 }
 legend {
-  font-weight: bold;
-  font-size: 18px;
+  font-weight:bolder;
+  font-size: 20px;
   color: #333;
 }
 label {
   display: block;
   margin-bottom: 5px;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight:bolder;
 }
 input[type="text"],
 input[type="tel"],
@@ -442,7 +443,7 @@ input[type="email"] {
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 20px;
 }
 input[type="checkbox"] {
   margin-right: 5px;
@@ -459,7 +460,7 @@ input[type="submit"] {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 20px;
   cursor: pointer;
   margin-right: 10px;
 }
@@ -472,7 +473,7 @@ button {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 20px;
   cursor: pointer;
   margin-right: 10px;
 }
