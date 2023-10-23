@@ -11,7 +11,29 @@
     <title>Hospital Oncológico de Día</title>
     <link rel="icon" href="media\cinta-cancer.ico"><!--Icono en la pestaña-->
     <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+</head>
+
 <body>
+    <header>
+        <div class="logo"><i class="fa-solid fa-hand-holding-medical fa-flip-horizontal"></i></div>
+    
+        <h1>Hospital de dia Oncologico</h1>
+        <nav class="navbar">
+            <a href="./index.html">Inicio</a></ul>
+            <a href="./paginas/nosotros.html"> Nosotros </a>
+            <a href="./paginas/servicios.html"> Servicios </a>
+            <a href="./paginas/cartilla.html"> Cartilla </a>
+            <a href="./paginas/contactos.html"> Contactanos </a>
+        </nav>
+    
+        
+        <div class="menu-icons">
+            <div id="menu-bar" class="fas fa-bars"><a href="#"></a></div>
+            <a href="./paginas/contactos.html">
+                <div id="user" class="fa-solid fa-user"></div>
+            </a>
+        </div>
+    </header>
     <div class="cont">
         <input type="checkbox" id="btn-mas">
         <div class="redes">
@@ -24,7 +46,7 @@
             <label for="btn-mas" class="fa fa-plus"></label>
         </div>
     </div>
-    <header class="hero">
+   <!--  <header class="hero">
         <div class="hero_container">
             <div class="hero_texto">
                 <div class="titulo_header">
@@ -44,18 +66,19 @@
                 </nav>
             </div>
         </div>
-    </header>
+    </header> -->
     <main class="cuerpo">
         <section class="box_index box1">
+            <div class="box_img">
+                <img src="./media/equipo-medico.jpg" alt="imágen de medicos">
+            </div>
             <div class="box_texto">
                 <h2>Hospital de día</h2>
                 <p>En nuestro Hospital de Día, nos enorgullece ofrecer un entorno sumamente cuidado y sofisticado, diseñado para brindar comodidad y bienestar a nuestros pacientes. Dotado de un consultorio de vanguardia y amplios espacios, tenemos la capacidad de llevar a cabo hasta seis tratamientos de forma simultánea, garantizando una atención eficiente y oportuna. No solo eso, sino que también valoramos el apoyo emocional, permitiendo que nuestros pacientes reciban la compañía de un ser querido durante sus sesiones médicas. Aquí, fusionamos la excelencia médica con un ambiente acogedor y distinguido, para que cada visita sea una experiencia de sanación completa y reconfortante.</p>
                 <br>
                 <p>Esta primera etapa fue posible gracias a la valiosa colaboración de diversas instituciones, empresas, comercios y personas de corazón noble, quienes se unieron para hacer realidad este sueño. Con su inestimable aporte, pudimos adquirir el más avanzado equipamiento médico que ahora se encuentra en nuestra sala, enfocado en elevar la calidad de atención a nuestros queridos pacientes oncológicos en la ciudad. Cada donante es una pieza fundamental en esta conmovedora iniciativa, y su generosidad ha dejado una huella imborrable en el camino hacia un futuro de salud y esperanza. Juntos, estamos construyendo un legado de amor y solidaridad que marcará la diferencia en la vida de quienes más lo necesitan. ¡Nuestra gratitud hacia todos aquellos que han hecho posible este extraordinario logro!</p>
             </div>
-            <div class="box_img">
-                <img src="./media/equipo-medico.jpg" alt="imágen de medicos">
-            </div>
+            
         </section>
         
         <section class="box_index box2">
@@ -105,6 +128,7 @@
             <small>&copy; 2023 <b>MMA Group</b> - Todos los Derechos Reservados.</small>
         </div>
     </footer>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
