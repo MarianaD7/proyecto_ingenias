@@ -264,7 +264,7 @@ nav a {
   width: 85%;
   margin: 0 auto;
   padding: 30px;
-  text-align: center; /* Centrar el texto en dispositivos pequeños */
+  text-align: center; 
 }
 .historia p {
   font-size: 20px; /* Ajusta el tamaño de la fuente según tus preferencias */
@@ -275,7 +275,7 @@ nav a {
 .tit_hist {
   text-align: center;
   font-weight: bold;
-  font-size: xx-large;
+  font-size: 2.5rem;
   margin-bottom: 10px; /* Agrega margen inferior al h2 */
   transition: color 0.3s; /* Transición de color para el hover */
 }

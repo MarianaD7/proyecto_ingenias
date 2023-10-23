@@ -15,39 +15,40 @@
 </head>
 
 <body>
-    <main>
-        <div class="cont">
-            <input type="checkbox" id="btn-mas">
-            <div class="redes">
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-phone"></a>
-                <a href="#" class="fa fa-whatsapp"></a>
-                <a href="#" class="fa fa-instagram"></a>
-            </div>
-            <div class="btn-mas">
-                <label for="btn-mas" class="fa fa-plus"></label>
-            </div>
+    <header>
+        <div class="logo"><i class="fa-solid fa-hand-holding-medical fa-flip-horizontal"></i></div>
+    
+        <h1>Hospital de dia Oncologico</h1>
+        <nav class="navbar">
+            <a href="../index.html">Inicio</a></ul>
+            <a href="./nosotros.html"> Nosotros </a>
+            <a href="./servicios.html"> Servicios </a>
+            <a href="./cartilla.html"> Cartilla </a>
+            <a href="./contactos.html"> Contactanos </a>
+        </nav>
+           
+        <div class="menu-icons">
+            <div id="menu-bar" class="fas fa-bars"><a href="#"></a></div>
+            <a href="./contactos.html">
+                <div id="user" class="fa-solid fa-user"></div>
+            </a>
         </div>
-        <header class="hero">
-            <div class="hero_texto">
-                <div class="titulo_header">
-                    <h1>Hospital Oncológico de Día</h1>
-                </div>
-                <div class="subtitulo_header">
-                    <h2>Encontranos</h2>
-                </div>
-                <nav class="navegador">
-                    <ul>
-                        <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="./nosotros.html">Nosotros</a></li>
-                        <li><a href="./cartilla.html">Cartilla de Médicos</a></li>
-                        <li><a href="./servicios.html">Servicios</a></li>
-                        <li><a href="./contactos.html">Contacto</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <div class="formulario">
+    </header>
+    <div class="cont">
+        <input type="checkbox" id="btn-mas">
+        <div class="redes">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-phone"></a>
+            <a href="#" class="fa fa-whatsapp"></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </div>
+        <div class="btn-mas">
+            <label for="btn-mas" class="fa fa-plus"></label>
+        </div>
+    </div>
+    <main>
+
+        <div class="formulario"><br><br>
             <h2>Consultas</h2>
             <form id="miFormulario" action="#" method="POST">
                 <fieldset>
@@ -63,23 +64,6 @@
                     <p><label>Email:</label></p>
                     <input type="email" id="email" name="email" placeholder="juanperez@gmail.com" required>
                 </fieldset>
-
-                <!--<fieldset>
-
-                    <legend>¿En que podemos ayudarte?</legend>
-
-                    <p>
-
-                        <label><input type="checkbox" name="turnos"> Turnos</label><br>
-
-                        <label><input type="checkbox" name="tratamiento"> Tratamiento </label><br>
-
-                        <label><input type="checkbox" name="consulta"> Consultas</label><br>
-
-                    </p>
-
-                </fieldset> -->
-
                 <div class="botones-container">
                     <input type="submit" id="enviarButton" value="Enviar">
                     <!-- <button id="mostrarInfoButton">Mostrar Información Almacenada</button> -->
@@ -88,8 +72,6 @@
 
                 <!-- Contenedor para mostrar la información almacenada -->
                 <div id="infoContainer"></div>
-
-
             </form>
         </div>
         <section class="contacto_info">
@@ -148,7 +130,8 @@
             <small>&copy; 2023 <b>MMA Group</b> - Todos los Derechos Reservados.</small>
         </div>
     </footer>
-    <script src="../main.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>
