@@ -14,7 +14,7 @@ function solicitarNumeroCelular() {
         alert("No se enviará un mensaje de recordatorio.");
     }
 }
-solicitarNumeroCelular(); 
+solicitarNumeroCelular();
 
 let formulario = document.getElementById("miFormulario");
 let infoContainer = document.getElementById('infoContainer');
@@ -36,7 +36,7 @@ formulario.addEventListener("submit", function (e) {
         nombre: nombre,
         apellido: apellido,
         telefono: telefono,
-        email: email,
+        email: email
     };
 
     let baseDeDatos = JSON.parse(localStorage.getItem('baseDeDatos')) || [];
@@ -47,27 +47,49 @@ formulario.addEventListener("submit", function (e) {
     baseDeDatos.forEach(function (formData, index) {
         let infoDiv = document.createElement('div');
         infoDiv.classList.add('infoEntry');
-        infoDiv.innerHTML = `<h3>Entrada ${index + 1}:</h3>
-            <p>Nombre: ${formData.nombre}</p>
-            <p>Apellido: ${formData.apellido}</p>
-            <p>Teléfono: ${formData.telefono}</p><br/>
-            <p>Correo Electrónico: ${formData.email}</p>`;
+        infoDiv.innerHTML = `<h3>Entrada ${
+            index + 1
+        }:</h3>
+            <p>Nombre: ${
+            formData.nombre
+        }</p>
+            <p>Apellido: ${
+            formData.apellido
+        }</p>
+            <p>Teléfono: ${
+            formData.telefono
+        }</p><br/>
+            <p>Correo Electrónico: ${
+            formData.email
+        }</p>`;
         infoContainer.appendChild(infoDiv);
     });
 
     formulario.reset();
 });
-
+document.getElementById("resetButton").addEventListener("click", function () {
+    infoContainer.innerHTML = ''; // Limpia el contenido del contenedor
+});
 // Mostrar los datos almacenados al cargar la página
 let baseDeDatos = JSON.parse(localStorage.getItem('baseDeDatos')) || [];
 infoContainer.innerHTML = '';
 baseDeDatos.forEach(function (formData, index) {
     let infoDiv = document.createElement('div');
     infoDiv.classList.add('infoEntry');
-    infoDiv.innerHTML = `<h3>Entrada ${index + 1}:</h3>
-        <p>Nombre: ${formData.nombre}</p>
-        <p>Apellido: ${formData.apellido}</p>
-        <p>Teléfono: ${formData.telefono}</p><br/>
-        <p>Correo Electrónico: ${formData.email}</p>`;
+    infoDiv.innerHTML = `<h3>Entrada ${
+        index + 1
+    }:</h3>
+        <p>Nombre: ${
+        formData.nombre
+    }</p>
+        <p>Apellido: ${
+        formData.apellido
+    }</p>
+        <p>Teléfono: ${
+        formData.telefono
+    }</p><br/>
+        <p>Correo Electrónico: ${
+        formData.email
+    }</p>`;
     infoContainer.appendChild(infoDiv);
 });
