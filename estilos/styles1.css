@@ -763,6 +763,7 @@ button:hover {
   nav a {
     font-size: 1.2rem;
   }
+
   .menu-icons div {
     font-size: 1.2rem;
     margin: 10px;
@@ -826,6 +827,7 @@ button:hover {
   /*cartilla*/
   .sectionCartilla h2 {
     font-size: 1.65rem;
+    margin-top: 4rem;
   }
   .card{
     position: relative;
@@ -1005,6 +1007,7 @@ button:hover {
   /*cartilla*/
   .sectionCartilla h2 {
     font-size: 23px;
+    margin-top: 4rem;
   }
   .card{
     position: relative;
@@ -1183,6 +1186,7 @@ button:hover {
   /*cartilla*/
   .sectionCartilla h2 {
     font-size: 23px;
+    margin-top: 4rem;
   }
   .card{
     position: relative;
