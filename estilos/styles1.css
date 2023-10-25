@@ -25,17 +25,15 @@
 }
 
 html {
-  font-size: 62.5%;
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
 }
-
+/*header*/
 header {
   background-color: var(--color);
   width: 100%;
   padding: 1rem 5%;
-  z-index: 1000;
   position: fixed;
   display: flex;
   justify-content: space-between;
@@ -47,7 +45,6 @@ header .logo {
   font-size: 2.5em;
   margin-right: 1px;
 }
-
 header h1 {
   color: white;
   letter-spacing: 1px;
@@ -56,16 +53,19 @@ header h1 {
   align-items: center;
   padding: 1rem 5%;
 }
-
 nav a {
   display: inline;
   color: white;
-  font-size: 1.9rem;
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight:bold;
   margin: 0 .5rem;
   text-decoration: none;
+  transition: all 0.2s ;
 }
-
+nav a:hover{
+  color: gray;
+  text-decoration: underline;
+}
 .menu-icons div {
   color: white;
   font-size: 2rem;
@@ -124,66 +124,6 @@ nav a {
   font-size: 25px;
 }
 
-/*Header*/
-.hero {
-  width: 100%;
-  color: white;
-  padding: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  border-bottom: 2px solid white;
-  background-color: rgba(51, 16, 107, 1);
-  background-image: linear-gradient(
-    90deg,
-    rgba(51, 16, 107, 1) 0%,
-    rgba(50, 60, 130, 1) 20%,
-    rgba(49, 107, 155, 1) 40%,
-    rgba(48, 158, 182, 1) 60%,
-    rgba(48, 205, 206, 1) 80%
-  );
-}
-.hero_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 2rem;
-}
-.hero_texto {
-  text-align: center;
-  display: flex;
-  flex-flow: column wrap;
-  gap: 2rem;
-}
-.titulo_header h1 {
-  font-size: 5rem;
-}
-.subtitulo_header h2 {
-  font-size: 3rem;
-}
-.navegador ul {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  gap: 5px;
-  padding: 5px;
-}
-.navegador li {
-  transition: all 0.2s;
-}
-.navegador li:hover {
-  transform: scale(1.2);
-  text-decoration: underline;
-}
-.navegador ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: bolder;
-}
 /*main*/
 /*index*/
 .cuerpo {
@@ -197,8 +137,10 @@ nav a {
   justify-content: center;
   flex-wrap: wrap;
   text-align: justify;
-  margin: 2rem 0;
   gap: 1rem;
+}
+.box1{
+  margin-top: 9rem;
 }
 .box_texto {
   width: 55rem;
@@ -226,7 +168,9 @@ nav a {
 
 /* Estilos específicos */
 /*pag nosotros*/
-
+.header-nosotros{
+  position: relative;
+}
 .gal-imag {
   max-width: 1200px;
   margin: 0 auto;
@@ -236,6 +180,7 @@ nav a {
   grid-gap: 20px;
   padding: 50px 5px;
 }
+
 .tit-gal {
   text-align: center;
   font-weight: bold;
@@ -258,6 +203,7 @@ nav a {
 .imag-grid:nth-child(4) {
   grid-column-start: span 2;
 }
+
 /* Estilos para la sección historia */
 .historia {
   background-color: #f0f0f0;
@@ -326,6 +272,9 @@ nav a {
 }
 
 /*pag cartilla*/
+.header-cartilla{
+  position: relative;
+}
 .sectionCartilla {
   display: flex;
   flex-flow: column wrap;
@@ -350,7 +299,7 @@ nav a {
 .card{
   position: relative;
   width: 400px;
-  height: 600px;
+  height: 550px;
   margin: 20px;
 }
 .card .face{
@@ -425,7 +374,8 @@ nav a {
   text-align: center;
   font-weight: bold;
   font-size: 2.5rem;
-  margin-bottom: 10px; /* Agrega margen inferior al h2 */
+  margin-bottom: 10px;
+  margin-top: 10rem;
   transition: color 0.3s; /* Transición de color para el hover */
 }
 /* Estilos para el hover */
@@ -463,6 +413,9 @@ nav a {
 }
 
 /*contacto*/
+.header-consultas{
+  position: relative;
+}
 .formulario {
   background-image: url("/media/fondo-medicina-escritorio.jpg");
   background-size: cover;
@@ -649,22 +602,59 @@ button:hover {
   font-size: 1.5rem;
   color: #666;
 }
+@media screen and (min-width: 320px) and (max-width: 1400px){
+  header {
+    padding: 2rem;
+  }
 
+  #menu-bar {
+    display: initial;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    background: var(--color);
+    width: 100%;
+    height: 100vh;
+  }
+  .navbar.active {
+    left: 0;
+  }
+  .navbar a {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    margin: 1rem;
+    border: 2px solid var(--backgroud);
+    border-radius: 10px;
+    background: var(--buttom-color);
+  }
+}
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   /*header*/
-  .titulo_header h1 {
-    font-size: 4rem;
+  header .logo {
+    font-size: 2em;
   }
-  .subtitulo_header h2 {
-    font-size: 2rem;
+  header h1 {
+    font-size: 2.3em;
+  }  
+  nav a {
+    font-size: 1.5rem;
+  }
+  .menu-icons div {
+    font-size: 1.8rem;
   }
 
   /*index*/
   .cuerpo {
     gap: 1.2rem;
   }
-  .box_index {
+  .box_index{
     margin: 0;
+  }
+  .box1 {
+    margin-top: 10rem;
   }
   .box_texto h2 {
     font-size: 1.85rem;
@@ -713,13 +703,14 @@ button:hover {
   }
 
   /*cartilla*/
+  
   .sectionCartilla h2 {
     font-size: 2rem;
   }
   .card{
     position: relative;
     width: 350px;
-    height: 550px;
+    height: 520px;
     margin: 20px;
   }
   
@@ -759,57 +750,33 @@ button:hover {
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
   /*header*/
-  html {
-    font-size: 55%;
+  header{
+    padding: 5px 10px;
   }
-
-  header {
-    padding: 2rem;
+  header .logo {
+    font-size: 1.8em;
   }
-
-  #menu-bar {
-    display: initial;
+  header h1 {
+    font-size: 1.8em;
+    text-align: center;
+  }  
+  nav a {
+    font-size: 1.2rem;
   }
-
-  .navbar {
-    position: absolute;
-    top: 100%;
-    left: -100%;
-    background: var(--color);
-    width: 100%;
-    height: 100vh;
+  .menu-icons div {
+    font-size: 1.2rem;
+    margin: 10px;
   }
-  .navbar.active {
-    left: 0;
-  }
-  .navbar a {
-    display: flex;
-    align-items: center;
-    padding: 1.5rem;
-    margin: 1rem;
-    border: 2px solid var(--backgroud);
-    border-radius: 10px;
-    background: var(--buttom-color);
-  }
-  .titulo_header h1 {
-    font-size: 2.9rem;
-  }
-  .subtitulo_header h2 {
-    font-size: 1.7rem;
-  }
-  .navegador ul {
-    gap: 20px;
-  }
-  .navegador ul li a {
-    font-size: 22px;
-  }
-
   /*index*/
   .cuerpo {
     gap: 1rem;
   }
   .box_index {
     margin: 0;
+  }
+
+  .box1 {
+    margin-top: 7rem;
   }
   .box_texto h2 {
     font-size: 1.65rem;
@@ -889,6 +856,7 @@ button:hover {
   /*servicios*/
   .tit-serv{
     font-size: 1.65rem;
+    margin-top: 5.8rem;
   }
   .intro-serv h3{
     font-size: 22px;
@@ -956,58 +924,37 @@ button:hover {
     opacity: 1;
     visibility: visible;
   }
-  html {
-    font-size: 55%;
-  }
-
-  header {
-    padding: 2rem;
-  }
-
-  #menu-bar {
-    display: initial;
-  }
-
-  .navbar {
-    position: absolute;
-    top: 100%;
-    left: -100%;
-    background: var(--color);
-    width: 100%;
-    height: 100vh;
-  }
-  .navbar.active {
-    left: 0;
-  }
-  .navbar a {
-    display: flex;
-    align-items: center;
-    padding: 1.5rem;
-    margin: 1rem;
-    border: 2px solid var(--backgroud);
-    border-radius: 10px;
-    background: var(--buttom-color);
-  }
-
   /*header*/
-  .titulo_header h1 {
-    font-size: 2rem;
+  header{
+    padding: 5px 10px;
   }
-  .subtitulo_header h2 {
-    font-size: 1.1rem;
+  header .logo {
+    font-size: 1.5em;
   }
-  .navegador ul {
-    gap: 10px;
+  header h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }  
+  nav a {
+    font-size: 1rem;
   }
-  .navegador ul li a {
-    font-size: 16.5px;
+  .menu-icons div {
+    font-size: 1.2rem;
+    margin: 10px;
   }
+  .navbar a{
+    padding: 1rem;
+  }
+
   /*index*/
   .cuerpo {
     gap: 1rem;
   }
   .box_index {
     margin: 0;
+  }
+  .box1{
+    margin-top: 6rem;
   }
   .box_texto h2 {
     font-size: 23px;
@@ -1062,7 +1009,7 @@ button:hover {
   .card{
     position: relative;
     width: 170px;
-    height: 350px;
+    height: 270px;
     margin: 20px;
   }
   .card .front h3{
@@ -1087,6 +1034,7 @@ button:hover {
   /*servicios*/
   .tit-serv{
     font-size: 23px;
+    margin-top: 5.5rem;
   }
   .intro-serv h3{
     font-size: 20px;
@@ -1159,51 +1107,26 @@ button:hover {
     opacity: 1;
     visibility: visible;
   }
-  html {
-    font-size: 55%;
-  }
-
-  header {
-    padding: 2rem;
-  }
-
-  #menu-bar {
-    display: initial;
-  }
-
-  .navbar {
-    position: absolute;
-    top: 100%;
-    left: -100%;
-    background: var(--color);
-    width: 100%;
-    height: 100vh;
-  }
-  .navbar.active {
-    left: 0;
-  }
-  .navbar a {
-    display: flex;
-    align-items: center;
-    padding: 1.5rem;
-    margin: 1rem;
-    border: 2px solid var(--backgroud);
-    border-radius: 10px;
-    background: var(--buttom-color);
-  }
-
   /*header*/
-  .titulo_header h1 {
-    font-size: 1.8rem;
+  header{
+    padding: 5px 10px;
   }
-  .subtitulo_header h2 {
-    font-size: 1.05rem;
+  header .logo {
+    font-size: 1.2em;
   }
-  .navegador ul {
-    gap: 10px;
+  header h1 {
+    font-size: 1.2rem;
+    text-align: center;
+  }  
+  nav a {
+    font-size: 1rem;
   }
-  .navegador ul li a {
-    font-size: 16px;
+  .navbar a{
+    padding: 1rem;
+  }
+  .menu-icons div {
+    font-size: 1rem;
+    margin: 10px;
   }
   /*index*/
   .cuerpo {
@@ -1211,6 +1134,9 @@ button:hover {
   }
   .box_index {
     margin: 0;
+  }
+  .box1{
+    margin-top: 5rem;
   }
   .box_texto h2 {
     font-size: 23px;
@@ -1261,7 +1187,7 @@ button:hover {
   .card{
     position: relative;
     width: 170px;
-    height: 350px;
+    height: 200px;
     margin: 20px;
   }
   .card .front h3{
@@ -1288,6 +1214,7 @@ button:hover {
   .tit-serv{
     font-size: 23px;
     padding: 10px 0;
+    margin-top: 5rem;
   }
   .intro-serv h3{
     font-size: 20px;
