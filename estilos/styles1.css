@@ -889,9 +889,10 @@ button:hover {
   /*footer*/
   .contenedor {
     grid-gap: 3rem;
+    margin: 0 5px;
   }
   .columna {
-    padding: 0 10px;
+    padding: 0 15px;
   }
   .columna h3 {
     font-size: 18px;
@@ -907,7 +908,7 @@ button:hover {
 @media screen and (min-width: 345px) and (max-width: 480px) {
   /*boton*/
   .btn-mas label {
-    font-size: 18px;
+    font-size: 20px;
   }
   #btn-mas:checked ~ .btn-mas label {
     font-size: 20px;
@@ -1073,6 +1074,7 @@ button:hover {
   }
   .contenedor {
     grid-gap: 1rem;
+    margin: 0 7px;
   }
   .columna {
     padding: 0 7px;
@@ -1091,7 +1093,7 @@ button:hover {
 @media screen and (min-width: 320px) and (max-width: 344px) {
   /*boton*/
   .btn-mas label {
-    font-size: 18px;
+    font-size: 20px;
   }
   #btn-mas:checked ~ .btn-mas label {
     font-size: 20px;
@@ -1165,7 +1167,7 @@ button:hover {
     align-self: center;
   }
   .historia {
-    margin: 0 10px;
+    margin: 0 autp;
     padding: 15px;
   }
   .historia .tit_hist,
