@@ -240,6 +240,9 @@ nav a:hover{
   font-size: 40px;
   margin-bottom: 35px;
 }
+.contenido-acordeon p{
+  font-size: 20px;
+}
 .acordeon {
   background: #fff;
 }
@@ -1181,6 +1184,9 @@ button:hover {
   }
   .contenedor-acordeon {
     margin-top: 40px;
+  }
+  .contenido-acordeon p{
+    font-size: 16px;
   }
   .acordeon label {
     font-size: 17.5px;
